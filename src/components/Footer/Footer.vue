@@ -18,7 +18,7 @@
       </a>
     </div>
     <div class="text-white font-montserrat text-sm">
-      © 2021 STARTUP. All rights reserved
+      © 2024 Théo SAKKRIOU. Tous droits réservés.
     </div>
   </section>
 </template>

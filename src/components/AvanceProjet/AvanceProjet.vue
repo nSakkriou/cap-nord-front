@@ -4,7 +4,8 @@ import Article from '../shared/Article/Article.vue';
 defineProps({
   articleArray: [{
     label: String,
-    description: String
+    description: String,
+    date: String
   }]
 }
 )

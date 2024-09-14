@@ -11,6 +11,8 @@
       <p class="font-pt-serif font-normal mb-7">
         Le projet est de relier Amsterdam au Cap Nord en vélo ...
       </p>
+      
+      <!-- 
       <div class="font-montserrat">
         <button class="bg-black px-6 py-4 rounded-lg border-2 border-black border-solid text-white mr-2 mb-2">
           Call to action
@@ -19,6 +21,8 @@
           Secondary action
         </button>
       </div>
+      -->
+      
     </div>
     <div class="flex justify-around md:block mt-8 md:mt-0 md:flex-1">
       

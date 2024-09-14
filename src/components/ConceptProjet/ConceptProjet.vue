@@ -4,6 +4,9 @@ import Card from '../shared/Card/Card.vue';
 // Les props pour le tableau de cartes
 defineProps({
   cardArray: [
+    {
+      label: String
+    }
   ]
 });
 

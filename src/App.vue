@@ -1,9 +1,10 @@
 <template>
-  <Nav :navArray='navArray'></Nav>
+    <Nav :navArray='navArray'></Nav>
   <Hero></Hero>
   <ConceptProjet :cardArray='cardArray'></ConceptProjet>
   <AvanceProjet :articleArray="articleArray"></AvanceProjet>
-  <FAQ></FAQ>
+  <MapSection></MapSection>
+  <FAQ :faq_item_array="faq_item_array"></FAQ>
   <Footer></Footer>
 </template>
 
@@ -14,6 +15,7 @@ import Hero from "./components/Hero/Hero.vue";
 import FAQ from "./components/FAQ/FAQ.vue";
 import ConceptProjet from "./components/ConceptProjet/ConceptProjet.vue";
 import AvanceProjet from "./components/AvanceProjet/AvanceProjet.vue"
+import MapSection from './components/Map/MapSection.vue';
 
 
 const navArray = [
@@ -41,12 +43,25 @@ const cardArray = [{
 const articleArray = [
 {
   label : "Premier jour", 
-  description : "lorem feergregregregregrereregerg"
+  description : "lorem feergregregregregrereregerg",
+  date : "13/09/2024"
 },
 {
   label : "Deuxième jour", 
-  description : "lorem feergregregregregrereregerg"
+  description : "lorem feergregregregregrereregerg",
+  date : "14/09/2024"
 }
+]
+
+const faq_item_array = [
+  {
+    question : "Question 1",
+    response : "Réponse 1"
+  },
+  {
+    question : "Question 2",
+    response : "Réponse 2"
+  }
 ]
 
 </script>

@@ -7,7 +7,7 @@ defineProps({
 </script>
 
 <template>
-  <div class='hvr-float text-center flex-1 flex flex-col mx-6 shadow-2xl relative bg-secondary rounded-2xl py-5 px-8 my-8'>
+  <div style="cursor: pointer;" class='hvr-float text-center flex-1 flex flex-col mx-6 shadow-2xl relative bg-secondary rounded-2xl py-5 px-8 my-8'>
     <h3 class="font-pt-serif font-normal text-2xl my-8">
       {{ card.label }}
     </h3>
