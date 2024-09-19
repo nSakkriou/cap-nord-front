@@ -1,16 +1,20 @@
 <script setup>
 defineProps({
   card : {
-    label: String
+    label: String,
+    link : String
   }
 })
 </script>
 
 <template>
+  <a :href="card.link">
   <div style="cursor: pointer;" class='hvr-float text-center flex-1 flex flex-col mx-6 shadow-2xl relative bg-secondary rounded-2xl py-5 px-8 my-8'>
     <h3 class="font-pt-serif font-normal text-2xl my-8">
       {{ card.label }}
     </h3>
+    </div>
+  </a>
     
     <!-- <div class="font-montserrat font-bold text-2xl mb-4">
           $25
@@ -33,7 +37,6 @@ defineProps({
         <button class=" border-2 border-solid border-black rounded-xl text-lg py-3 mt-4">
           Choose plan
         </button> -->
-  </div>
 </template>
 
 <style scoped>
@@ -52,8 +55,8 @@ defineProps({
   transition-timing-function: ease-out;
 }
 .hvr-float:hover, .hvr-float:focus, .hvr-float:active {
-  -webkit-transform: translateY(-8px);
-  transform: translateY(-8px);
+  -webkit-transform: translateY(-50px);
+  transform: translateY(-50px);
 }
 
 </style>

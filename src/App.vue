@@ -16,7 +16,8 @@ import FAQ from "./components/FAQ/FAQ.vue";
 import ConceptProjet from "./components/ConceptProjet/ConceptProjet.vue";
 import AvanceProjet from "./components/AvanceProjet/AvanceProjet.vue"
 import MapSection from './components/Map/MapSection.vue';
-
+import { getAllBlog } from "./service/blog/blog"
+import { ref } from "vue"
 
 const navArray = [
   {
@@ -30,28 +31,27 @@ const navArray = [
 ]
 
 const cardArray = [{
-    label: "Concept du projet"
+    label: "Concept du projet",
+    link : ""
   },
   {
-    label : "Carte GPX"
+    label : "Carte GPX",
+    link : "#map-section"
   },
   {
-    label : "Les partenaires"
+    label : "Les partenaires",
+    link : ""
   }
 ]
 
-const articleArray = [
-{
-  label : "Premier jour", 
-  description : "lorem feergregregregregrereregerg",
-  date : "13/09/2024"
-},
-{
-  label : "Deuxième jour", 
-  description : "lorem feergregregregregrereregerg",
-  date : "14/09/2024"
-}
-]
+let articleArray = ref([
+])
+
+getAllBlog().then(res => {
+  let data = res.data
+  console.log(data)
+  articleArray.value = data
+})
 
 const faq_item_array = [
   {
