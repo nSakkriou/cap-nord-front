@@ -1,0 +1,1 @@
+export const getGPS = fetch("https://nathansakkriou.com/api/v1/cap-nord/gps").then(res => res.json())

@@ -51,5 +51,7 @@ def run():
     delete_all_files(BUCKET_NAME)
     upload_dist_folder(BUCKET_NAME, DIST_FOLDER)
 
+    print("Consulte les modifs sur : http://cap-nord-bucket.s3-website.eu-west-3.amazonaws.com/index.html")
+
 if __name__ == "__main__":
     run()

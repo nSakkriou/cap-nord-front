@@ -1,5 +1,5 @@
 <template>
-    <Nav :navArray='navArray'></Nav>
+  <Nav :navArray='navArray'></Nav>
   <Hero></Hero>
   <ConceptProjet :cardArray='cardArray'></ConceptProjet>
   <AvanceProjet :articleArray="articleArray"></AvanceProjet>
@@ -31,7 +31,7 @@ const navArray = [
 ]
 
 const cardArray = [{
-    label: "Concept du projet",
+    label: "Concept",
     link : ""
   },
   {

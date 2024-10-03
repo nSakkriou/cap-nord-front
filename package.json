@@ -6,13 +6,19 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "update-prod": "vite build && python scripts/upload_to_prod.py"
   },
   "dependencies": {
+    "@studiometa/vue-mapbox-gl": "^2.5.0",
+    "@tmcw/togeojson": "^5.8.1",
     "cors": "^2.8.5",
+    "fs": "^0.0.1-security",
     "leaflet": "^1.9.4",
     "leaflet-gpx": "^2.1.2",
-    "vue": "^3.4.37"
+    "mapbox-gl": "^3.6.0",
+    "vue": "^3.4.37",
+    "xmldom": "^0.6.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.2",
