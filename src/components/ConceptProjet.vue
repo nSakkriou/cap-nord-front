@@ -1,5 +1,5 @@
 <script setup>
-import Card from '../shared/Card/Card.vue';
+import Card from './shared/Card.vue';
 
 // Les props pour le tableau de cartes
 defineProps({

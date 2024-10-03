@@ -1,5 +1,5 @@
 <script setup>
-import Article from '../shared/Article/Article.vue';
+import Article from './shared/Article.vue';
 
 defineProps({
   articleArray: [{

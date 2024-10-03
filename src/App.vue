@@ -9,14 +9,14 @@
 </template>
 
 <script setup>
-import Footer from './components/Footer/Footer.vue';
-import Nav from './components/Nav/Nav.vue';
-import Hero from "./components/Hero/Hero.vue";
-import FAQ from "./components/FAQ/FAQ.vue";
-import ConceptProjet from "./components/ConceptProjet/ConceptProjet.vue";
-import AvanceProjet from "./components/AvanceProjet/AvanceProjet.vue"
-import MapSection from './components/Map/MapSection.vue';
-import { getAllBlog } from "./service/blog/blog"
+import Footer from './components/Footer.vue';
+import Nav from './components/Nav.vue';
+import Hero from "./components/Hero.vue";
+import FAQ from "./components/FAQ.vue";
+import ConceptProjet from "./components/ConceptProjet.vue";
+import AvanceProjet from "./components/AvanceProjet.vue"
+import MapSection from './components/MapSection.vue';
+import { getAllBlog } from "./service/blog"
 import { ref } from "vue"
 
 const navArray = [
@@ -55,12 +55,14 @@ getAllBlog().then(res => {
 
 const faq_item_array = [
   {
-    question : "Question 1",
-    response : "Réponse 1"
+    question : "Partenaire 1",
+    response : "Info partenaire 1",
+    logo_url : ""
   },
   {
-    question : "Question 2",
-    response : "Réponse 2"
+    question : "Partenaire 2",
+    response : "Info partenaire 2",
+    logo_url : ""
   }
 ]
 

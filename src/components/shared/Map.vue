@@ -1,5 +1,5 @@
 <template>
-  <iframe src="https://gpx.studio/embed?options=%7B%22token%22%3A%22pk.eyJ1IjoibnNha2tyaW91IiwiYSI6ImNtMTE0bWl4MjBiejkya3I1M2Y4cHZia2MifQ.jUrKf8ftsplYCdZEz4_0gA%22%2C%22files%22%3A%5B%22https%3A%2F%2Fnathansakkriou.com%2FwebContent%2Fget%2Fac3b06e8-d279-4da1-a52b-1693b32509aa%22%5D%7D" width="100%" height="600px" frameborder="0" style="outline: none;"></iframe>
+  <iframe src="https://gpx.studio/embed?options=%7B%22token%22%3A%22pk.eyJ1IjoibnNha2tyaW91IiwiYSI6ImNtMTE0bWl4MjBiejkya3I1M2Y4cHZia2MifQ.jUrKf8ftsplYCdZEz4_0gA%22%2C%22files%22%3A%5B%22https%3A%2F%2Fnathansakkriou.com%2FwebContent%2Fget%2Fac3b06e8-d279-4da1-a52b-1693b32509aa%22%5D%7D" width="100%" height="800px" frameborder="0" style="outline: none;"></iframe>
 </template>
 
 <script setup>

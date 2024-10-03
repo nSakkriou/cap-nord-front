@@ -10,7 +10,8 @@
 </template>
 
 <script setup>
-import Map from '../shared/Map/Map.vue';
+import Map from './shared/Map.vue';
+
 
 </script>
 
