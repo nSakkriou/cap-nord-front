@@ -21,12 +21,20 @@ import { ref } from "vue"
 
 const navArray = [
   {
-    label : "Mon projets",
-    url: "/projects"
+    label : "Le concept",
+    url: "#concept"
   },
   {
-    label: "Avancée du projet",
-    url : "/avancee"
+    label: "Mon Blog",
+    url : "#blog"
+  },
+  {
+    label : "Mon avancée",
+    url: "#map-section"
+  },
+  {
+    label: "Mes partenaires",
+    url : "#partenaire"
   }
 ]
 
@@ -50,7 +58,7 @@ let articleArray = ref([
 
 getAllBlog().then(res => {
   let data = res.data
-  console.log(data)
+  data = data.reverse()
   articleArray.value = data
 })
 

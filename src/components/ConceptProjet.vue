@@ -16,7 +16,7 @@ let odd = false;
 </script>
 
 <template>
-<section class="bg-black text-white sectionSize">
+<section id="concept" class="bg-black text-white sectionSize">
   <div>
     <h2 class="text-white secondaryTitle bg-underline2 bg-100%">
       Comprendre mon projet
