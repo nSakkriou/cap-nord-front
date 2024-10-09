@@ -1,1 +1,1 @@
-Prod : http://cap-nord-bucket.s3-website.eu-west-3.amazonaws.com/index.html
+https://cap-nord-front.vercel.app/

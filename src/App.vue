@@ -1,5 +1,5 @@
 <template>
-  <Nav :navArray='navArray'></Nav>
+  <!--<Nav :navArray='navArray'></Nav>-->
   <Hero></Hero>
   <ConceptProjet :cardArray='cardArray'></ConceptProjet>
   <AvanceProjet :articleArray="articleArray"></AvanceProjet>
@@ -12,9 +12,9 @@
 import Footer from './components/Footer.vue';
 import Nav from './components/Nav.vue';
 import Hero from "./components/Hero.vue";
-import FAQ from "./components/FAQ.vue";
-import ConceptProjet from "./components/ConceptProjet.vue";
-import AvanceProjet from "./components/AvanceProjet.vue"
+import FAQ from "./components/PartenaireSection.vue";
+import ConceptProjet from "./components/ConceptProjetSection.vue";
+import AvanceProjet from "./components/BlogSection.vue"
 import MapSection from './components/MapSection.vue';
 import { getAllBlog } from "./service/blog"
 import { ref } from "vue"

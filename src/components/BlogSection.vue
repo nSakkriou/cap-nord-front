@@ -22,6 +22,7 @@ defineProps({
       <h2 class="secondaryTitle bg-underline3 bg-100%">Blog</h2>
     </div>
     <div class="flex flex-col">
+      <p v-if="articleArray.length === 0">Je n'ai pas encore fait de post mais reviens vite afin de suivre mes aventures</p>
       <Article v-for="article in articleArray" :blog="article"></Article>
     </div>
   </section>

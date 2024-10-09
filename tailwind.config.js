@@ -23,11 +23,11 @@ export default {
     },
     extend: {
       backgroundImage: {
-        underline1: "url('./assets/Underline1.svg')",
-        underline2: "url('./assets/Underline2.svg')",
-        underline3: "url('./assets/Underline3.svg')",
-        underline4: "url('./assets/Underline4.svg')",
-        highlight3: "url('./assets/Highlight3.svg')",
+        underline1: "url('/assets/Underline1.svg')",
+        underline2: "url('/assets/Underline2.svg')",
+        underline3: "url('/assets/Underline3.svg')",
+        underline4: "url('/assets/Underline4.svg')",
+        highlight3: "url('/assets/Highlight3.svg')",
       },
       keyframes: {
         "fade-in-down": {
