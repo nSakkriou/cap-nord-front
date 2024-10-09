@@ -1,5 +1,6 @@
 <template>
-  <section id="map-section" class="bg-black text-white sectionSize">
+  <div id="map-section"></div>
+  <section id="map-section-div" class="bg-black text-white sectionSize">
     <div>
       <h2 class="text-white secondaryTitle bg-underline2 bg-100%">Où j'en suis ??</h2>
     </div>

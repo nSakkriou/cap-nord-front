@@ -17,7 +17,7 @@ defineProps({
 
 
 <template>
-  <section class="sectionSize bg-secondary">
+  <section class="sectionSize bg-secondary" id="blog">
     <div>
       <h2 class="secondaryTitle bg-underline3 bg-100%">Blog</h2>
     </div>

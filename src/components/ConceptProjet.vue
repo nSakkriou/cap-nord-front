@@ -31,5 +31,13 @@ let odd = false;
         :card="card" 
       />
     </div>
+
+    <h2 class="text-white secondaryTitle bg-underline2 bg-100%">
+      Le concept
+    </h2>
+
+    <div>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum vel officia quibusdam distinctio itaque iste non, quod eos. Adipisci dignissimos quaerat nobis nisi aliquam magnam illum cum ad quibusdam quas.
+    </div>
   </section>
 </template>

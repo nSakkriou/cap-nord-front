@@ -30,17 +30,18 @@ const navArray = [
   }
 ]
 
-const cardArray = [{
-    label: "Concept",
-    link : ""
+const cardArray = [
+  {
+    label : "Mon blog",
+    link : "#blog"
   },
   {
-    label : "Carte GPX",
+    label : "Mon avancée",
     link : "#map-section"
   },
   {
-    label : "Les partenaires",
-    link : ""
+    label : "Mes partenaires",
+    link : "#partenaire"
   }
 ]
 
