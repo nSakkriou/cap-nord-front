@@ -1,8 +1,5 @@
 <template>
     <section class="bg-black sectionSize">
-    <div class="mb-4">
-      <img src='/assets/Logo_white.svg' alt="Logo" class="h-4" />
-    </div>
     <div class="flex mb-8">
       <a href="#">
         <img src='/assets/logos/Facebook.svg' alt="Facebook logo" class="mx-4" />
