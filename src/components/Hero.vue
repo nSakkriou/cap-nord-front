@@ -11,6 +11,10 @@
       <p class="font-pt-serif font-normal mb-7">
         Le projet est de relier Amsterdam au Cap Nord en vélo ...
       </p>
+
+      <div v-if="isTheo">
+        Que pour toi théo : <a href="https://nathansakkriou.com/cap-nord">Lien pour le dashboard</a>
+      </div>
       
       <!-- 
       <div class="font-montserrat">
@@ -38,3 +42,17 @@
     </div>
     </section>
 </template>
+
+<script setup>
+
+import {ref} from "vue";
+
+let currentURL = document.location.href
+let isTheo = ref(false)
+
+if(currentURL.indexOf("whois=theo") !== -1) {
+  isTheo.value = true
+}
+
+
+</script>

@@ -115,16 +115,16 @@ const editor = new EditorJS({
     header: {
       class:
       Header,
-      inlineToolbar:
-          ['link'], // Ajout d'une barre d'outils en ligne (ex. lien)
-      config:
-          {
-            placeholder: 'Entrez un titre',
+          inlineToolbar:
+      ['link'], // Ajout d'une barre d'outils en ligne (ex. lien)
+          config:
+      {
+        placeholder: 'Entrez un titre',
             levels:
-                [1, 2, 3, 4], // Niveaux de titre disponibles
+        [1, 2, 3, 4], // Niveaux de titre disponibles
             defaultLevel:
-                1
-          }
+        1
+      }
     },
 
     /**
@@ -133,8 +133,8 @@ const editor = new EditorJS({
     paragraph: {
       class:
       Paragraph,
-      inlineToolbar:
-          true // Ajout de la barre d'outils en ligne
+          inlineToolbar:
+      true // Ajout de la barre d'outils en ligne
     },
 
     /**
@@ -143,89 +143,27 @@ const editor = new EditorJS({
     list: {
       class:
       List,
-      inlineToolbar:
-          true,
-      config:
-          {
-            defaultStyle: 'unordered' // Liste non ordonnée par défaut
-          }
+          inlineToolbar:
+      true,
+          config:
+      {
+        defaultStyle: 'unordered' // Liste non ordonnée par défaut
+      }
     },
 
-    /**
-     * Bloc d'image.
-     */
-    image: {
-      class:
-      ImageTool,
-      config:
-          {
-            endpoints: {
-              byFile: '/uploadFile', // Point d'upload du fichier
-              byUrl:
-                  '/fetchUrl', // Point d'upload par URL
-            }
-            ,
-            caption: true, // Activer les légendes sous les images
-            placeholder:
-                'Téléchargez ou collez une URL d\'image'
-          }
-    },
-
-    /**
-     * Bloc de citation.
-     */
-    quote: {
-      class:
-      Quote,
-      inlineToolbar:
-          true,
-      config:
-          {
-            quotePlaceholder: 'Tapez la citation',
-            captionPlaceholder:
-                'Auteur'
-          }
-    },
-
-    /**
-     * Bloc de code pour les extraits de code.
-     */
-    code: {
-      class:
-      CodeTool,
-    },
-
-    /**
-     * Bloc de tableau.
-     */
     table: {
       class:
       Table,
-      inlineToolbar:
-          true,
-      config:
-          {
-            rows: 2, // Nombre initial de lignes
+          inlineToolbar:
+      true,
+          config:
+      {
+        rows: 2, // Nombre initial de lignes
             cols:
-                3, // Nombre initial de colonnes
-          }
+        3, // Nombre initial de colonnes
+      }
     },
 
-    /**
-     * Bloc d'intégration vidéo.
-     */
-    embed: {
-      class:
-      Embed,
-      config:
-          {
-            services: {
-              youtube: true,
-              coub: true,
-              vimeo: true,
-            }
-          }
-    },
     delimiter: Delimiter,
   }
 })
