@@ -1,22 +1,4 @@
-<script setup>
-import { ref } from 'vue';
 
-const props = defineProps({
-    blog: {
-        id: String,
-        title: String,
-        content: String,
-        date: String,
-        imageURL: [String],
-    },
-});
-
-const showFullContent = ref(false);
-
-const toggleContent = () => {
-    showFullContent.value = !showFullContent.value;
-};
-</script>
 
 <template>
     <div style="background-color: whitesmoke;" class="article-container w-full mb-4 max-w-6xl mx-auto p-6 bg-white rounded-lg shadow-lg">
@@ -26,23 +8,27 @@ const toggleContent = () => {
                 <p class="text-sm text-gray-400">{{ blog.date }}</p>
 
                 <!-- Display either a truncated version or the full content -->
-                <p class="mt-4 text-gray-700">
-                    <span v-if="!showFullContent">
+              <div :id="idEditorjs"></div>
+              <button @click="toggleContent" class="ml-2 text-blue-600 hover:underline">
+                Voir plus
+              </button>
+              <!--
+                <p class="mt-4 text-gray-700" v-if="!showFullContent">
                         {{ blog.content.substring(0, 200) }}...
-                        <p>
+                        <span>
                             <button @click="toggleContent" class="ml-2 text-blue-600 hover:underline">
                                 Voir plus
                             </button>
-                        </p>
-                    </span>
-                    <span v-else>
-                        {{ blog.content }}
-                        <p><button @click="toggleContent" class="ml-2 text-blue-600 hover:underline">
-                                Voir moins
-                            </button>
-                        </p>
-                    </span>
-                </p>
+                        </span>
+                  </p>
+                  <div v-else>
+                      {{ blog.content }}
+                      <p><button @click="toggleContent" class="ml-2 text-blue-600 hover:underline">
+                              Voir moins
+                          </button>
+                       </p>
+                  </div>
+                  -->
 
                 <!-- Responsive Image carousel -->
                 <div class="carousel mt-6">
@@ -58,6 +44,44 @@ const toggleContent = () => {
         </div>
     </div>
 </template>
+
+<script setup>
+import { ref } from 'vue';
+import EditorJS from "@editorjs/editorjs";
+
+const props = defineProps({
+  blog: {
+    id: String,
+    title: String,
+    content: String,
+    date: String,
+    imageURL: [String],
+  },
+});
+
+const idEditorjs = props.blog.id + '-editorjs'
+
+const editor = new EditorJS({
+  holder : idEditorjs,
+  data: props.blog.content.substring(0, 200),
+  readOnly: true
+})
+
+let showFullContent = false;
+
+const toggleContent = () => {
+  showFullContent = !showFullContent;
+
+  if(showFullContent) {
+    console.log(props.blog.content)
+    editor.data = props.blog.content
+  }
+  else {
+    console.log(props.blog.content.substring(0, 200))
+    editor.data = props.blog.content.substring(0, 200)
+  }
+};
+</script>
 
 <style scoped>
 .carousel {

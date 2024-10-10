@@ -1,23 +1,22 @@
 <template>
   <!--<Nav :navArray='navArray'></Nav>-->
   <Hero></Hero>
-  <ConceptProjet :cardArray='cardArray'></ConceptProjet>
-  <AvanceProjet :articleArray="articleArray"></AvanceProjet>
+  <ConceptProjetSection :cardArray='cardArray'></ConceptProjetSection>
+  <BlogSection :articleArray="articleArray"></BlogSection>
   <MapSection></MapSection>
-  <FAQ :faq_item_array="faq_item_array"></FAQ>
+  <PartenaireSection :faq_item_array="faq_item_array"></PartenaireSection>
   <Footer></Footer>
 </template>
 
 <script setup>
 import Footer from './components/Footer.vue';
-import Nav from './components/Nav.vue';
 import Hero from "./components/Hero.vue";
-import FAQ from "./components/PartenaireSection.vue";
-import ConceptProjet from "./components/ConceptProjetSection.vue";
-import AvanceProjet from "./components/BlogSection.vue"
 import MapSection from './components/MapSection.vue';
 import { getAllBlog } from "./service/blog"
 import { ref } from "vue"
+import ConceptProjetSection from "./components/ConceptProjetSection.vue";
+import BlogSection from "./components/BlogSection.vue";
+import PartenaireSection from "./components/PartenaireSection.vue";
 
 const navArray = [
   {
