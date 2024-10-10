@@ -4,7 +4,7 @@ import { ref, computed, watch } from 'vue';
 
 const props = defineProps(['articleArray']); // On passe simplement la prop
 
-const maxShowArticle = 1
+const maxShowArticle = 2
 const currentPage = ref(0);
 
 // Utilisation de computed pour rendre le calcul réactif
@@ -33,7 +33,7 @@ const showArticle = computed(() => props.articleArray.slice(currentPage.value * 
     </div>
 
     <div v-if="maxPages > 1">
-      <button v-for="i in maxPages" :class="{'bg-white' : true, 'p-2' : true, 'mr-2' : true, 'text-red' : currentPage === i-1}" :data-page-id="i-1" @click="switchPage">{{i}}</button>
+      <button v-for="i in maxPages" style="border-radius: 10px" :class="{'bg-white' : true, 'p-2' : true, 'mr-2' : true, 'underline' : currentPage === i-1, 'px-3' : true}" :data-page-id="i-1" @click="switchPage"><b>{{i}}</b></button>
     </div>
 
   </section>
