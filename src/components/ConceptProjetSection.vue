@@ -23,7 +23,7 @@ let odd = false;
     </h2>
   </div>
 
-  <div class="text-black w-full items-center flex flex-col md:flex-row justify-between pb-7">
+  <div class="text-black w-full gap-4 items-center flex flex-col md:flex-row justify-between pb-7">
       <!-- Utiliser la fonction pour assigner dynamiquement la classe -->
       <Card 
         v-for="(card, index) in cardArray" 

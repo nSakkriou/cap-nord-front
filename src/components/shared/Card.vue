@@ -9,7 +9,7 @@ defineProps({
 
 <template>
     <a :href="card.link" class="w-full h-auto flex justify-center items-center ">
-      <div class="hvr-float text-center flex flex-col mx-auto shadow-2xl bg-secondary rounded-2xl py-5 my-8">
+      <div class="hvr-float text-center w-full flex flex-col mx-auto shadow-2xl gap-4 bg-secondary rounded-2xl py-5 my-8">
         <h3 class="font-pt-serif font-normal text-2xl my-8 mx-4">{{ card.label }}</h3>
       </div>
     </a>
