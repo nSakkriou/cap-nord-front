@@ -75,3 +75,9 @@ const faq_item_array = [
 ]
 
 </script>
+
+<style>
+.codex-editor__redactor {
+  padding-bottom: 20px !important;
+}
+</style>

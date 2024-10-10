@@ -9,8 +9,8 @@
 
                 <!-- Display either a truncated version or the full content -->
               <div :id="idEditorjs"></div>
-              <button @click="toggleContent" class="ml-2 text-blue-600 hover:underline">
-                Voir plus
+              <button v-if="have2ShowBtn()" @click="toggleContent" style="border: 1px solid black" class="border-black p-2 rounded-md d-flex justify-between items-center mt-4 text-secondary-500 focus:outline-none">
+                {{voirPlus}} <i :class="voirPlusIcon"></i>
               </button>
               <!--
                 <p class="mt-4 text-gray-700" v-if="!showFullContent">
@@ -68,11 +68,44 @@ const props = defineProps({
   },
 });
 
-const idEditorjs = props.blog.id + '-editorjs'
+const voirPlus = ref("Voir plus")
+const voirPlusIcon = ref("fa-solid fa-chevron-down")
 
+const idEditorjs = props.blog.id + '-editorjs'
+let showFullContent = false;
+const MAX_BLOCK_CROP_VIEW = 4;
+
+let have2ShowBtn = () => {
+  let cropContent = JSON.parse(props.blog.content)
+  return MAX_BLOCK_CROP_VIEW <= cropContent.blocks.length
+}
+
+const getCropContent = () => {
+  let cropContent = JSON.parse(props.blog.content)
+  cropContent.blocks = cropContent.blocks.slice(0, MAX_BLOCK_CROP_VIEW)
+
+  return cropContent
+}
+
+const toggleContent = () => {
+  showFullContent = !showFullContent;
+
+  if(showFullContent) {
+    editor.render(JSON.parse(props.blog.content))
+    voirPlus.value = "Voir moins"
+    voirPlusIcon.value = "fa-solid fa-chevron-up"
+  }
+  else {
+    editor.render(getCropContent())
+    voirPlus.value = "Voir plus"
+    voirPlusIcon.value = "fa-solid fa-chevron-down"
+  }
+};
+
+console.log(getCropContent())
 const editor = new EditorJS({
   holder : idEditorjs,
-  data: JSON.parse(props.blog.content),
+  data: getCropContent(),
   readOnly: true,
 
   tools: {
@@ -197,20 +230,10 @@ const editor = new EditorJS({
   }
 })
 
-let showFullContent = false;
+document.querySelectorAll(".codex-editor__redactor").forEach(elem => {
+  elem.style.paddingBottom = "20px"
+})
 
-const toggleContent = () => {
-  showFullContent = !showFullContent;
-
-  if(showFullContent) {
-    console.log(props.blog.content)
-    editor.data = props.blog.content
-  }
-  else {
-    console.log(props.blog.content.substring(0, 200))
-    editor.data = props.blog.content.substring(0, 200)
-  }
-};
 </script>
 
 <style scoped>
