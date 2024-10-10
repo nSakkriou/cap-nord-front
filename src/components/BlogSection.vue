@@ -15,6 +15,7 @@ function switchPage(event) {
   let btn = event.target;
   const btnId = parseInt(btn.dataset.pageId)
   currentPage.value = btnId;
+  window.location.href = "#blog"
 }
 
 const showArticle = computed(() => props.articleArray.slice(currentPage.value * maxShowArticle, maxShowArticle + (currentPage.value * maxShowArticle)))
