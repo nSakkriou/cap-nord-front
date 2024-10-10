@@ -48,6 +48,15 @@
 <script setup>
 import { ref } from 'vue';
 import EditorJS from "@editorjs/editorjs";
+import Header from "@editorjs/header";
+import Paragraph from "@editorjs/paragraph";
+import List from "@editorjs/list";
+import ImageTool from "@editorjs/image";
+import Quote from "@editorjs/quote";
+import CodeTool from "@editorjs/code";
+import Table from "@editorjs/table";
+import Embed from "@editorjs/embed";
+import Delimiter from "@editorjs/delimiter";
 
 const props = defineProps({
   blog: {
@@ -63,8 +72,129 @@ const idEditorjs = props.blog.id + '-editorjs'
 
 const editor = new EditorJS({
   holder : idEditorjs,
-  data: props.blog.content.substring(0, 200),
-  readOnly: true
+  data: JSON.parse(props.blog.content),
+  readOnly: true,
+
+  tools: {
+    /**
+     * Bloc de titre.
+     */
+    header: {
+      class:
+      Header,
+      inlineToolbar:
+          ['link'], // Ajout d'une barre d'outils en ligne (ex. lien)
+      config:
+          {
+            placeholder: 'Entrez un titre',
+            levels:
+                [1, 2, 3, 4], // Niveaux de titre disponibles
+            defaultLevel:
+                1
+          }
+    },
+
+    /**
+     * Bloc de paragraphe.
+     */
+    paragraph: {
+      class:
+      Paragraph,
+      inlineToolbar:
+          true // Ajout de la barre d'outils en ligne
+    },
+
+    /**
+     * Bloc de liste ordonnée et non ordonnée.
+     */
+    list: {
+      class:
+      List,
+      inlineToolbar:
+          true,
+      config:
+          {
+            defaultStyle: 'unordered' // Liste non ordonnée par défaut
+          }
+    },
+
+    /**
+     * Bloc d'image.
+     */
+    image: {
+      class:
+      ImageTool,
+      config:
+          {
+            endpoints: {
+              byFile: '/uploadFile', // Point d'upload du fichier
+              byUrl:
+                  '/fetchUrl', // Point d'upload par URL
+            }
+            ,
+            caption: true, // Activer les légendes sous les images
+            placeholder:
+                'Téléchargez ou collez une URL d\'image'
+          }
+    },
+
+    /**
+     * Bloc de citation.
+     */
+    quote: {
+      class:
+      Quote,
+      inlineToolbar:
+          true,
+      config:
+          {
+            quotePlaceholder: 'Tapez la citation',
+            captionPlaceholder:
+                'Auteur'
+          }
+    },
+
+    /**
+     * Bloc de code pour les extraits de code.
+     */
+    code: {
+      class:
+      CodeTool,
+    },
+
+    /**
+     * Bloc de tableau.
+     */
+    table: {
+      class:
+      Table,
+      inlineToolbar:
+          true,
+      config:
+          {
+            rows: 2, // Nombre initial de lignes
+            cols:
+                3, // Nombre initial de colonnes
+          }
+    },
+
+    /**
+     * Bloc d'intégration vidéo.
+     */
+    embed: {
+      class:
+      Embed,
+      config:
+          {
+            services: {
+              youtube: true,
+              coub: true,
+              vimeo: true,
+            }
+          }
+    },
+    delimiter: Delimiter,
+  }
 })
 
 let showFullContent = false;
@@ -92,5 +222,9 @@ const toggleContent = () => {
 .carousel::-webkit-scrollbar {
     display: none;
     /* Hide scrollbar in Chrome, Safari, Opera */
+}
+
+.ce-block__content {
+  margin: unset;
 }
 </style>

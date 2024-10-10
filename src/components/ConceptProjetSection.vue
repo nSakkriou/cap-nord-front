@@ -18,12 +18,12 @@ let odd = false;
 <template>
 <section id="concept" class="bg-black text-white sectionSize">
   <div>
-    <h2 class="text-white secondaryTitle bg-underline2 bg-100%">
+    <h2 class="text-center text-white secondaryTitle bg-underline2 bg-100%">
       Comprendre mon projet
     </h2>
   </div>
 
-  <div class="text-black w-full gap-4 items-center flex flex-col md:flex-row justify-between pb-7">
+  <div class="text-black w-full md:gap-5 gap-0 items-center flex flex-col md:flex-row justify-between pb-7">
       <!-- Utiliser la fonction pour assigner dynamiquement la classe -->
       <Card 
         v-for="(card, index) in cardArray" 
@@ -32,11 +32,11 @@ let odd = false;
       />
     </div>
 
-    <h2 class="text-white secondaryTitle bg-underline2 bg-100%">
+    <h2 class="text-center text-white secondaryTitle bg-underline2 bg-100%">
       Le concept
     </h2>
 
-    <div>
+    <div class="text-center">
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum vel officia quibusdam distinctio itaque iste non, quod eos. Adipisci dignissimos quaerat nobis nisi aliquam magnam illum cum ad quibusdam quas.
     </div>
   </section>

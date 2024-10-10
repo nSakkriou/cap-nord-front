@@ -10,7 +10,16 @@
     "update-prod": "vite build && python scripts/upload_to_prod.py"
   },
   "dependencies": {
+    "@editorjs/code": "^2.9.2",
+    "@editorjs/delimiter": "^1.4.2",
     "@editorjs/editorjs": "^2.30.6",
+    "@editorjs/embed": "^2.7.4",
+    "@editorjs/header": "^2.8.8",
+    "@editorjs/image": "^2.9.3",
+    "@editorjs/list": "^1.10.0",
+    "@editorjs/paragraph": "^2.11.6",
+    "@editorjs/quote": "^2.7.2",
+    "@editorjs/table": "^2.4.2",
     "@studiometa/vue-mapbox-gl": "^2.5.0",
     "@tmcw/togeojson": "^5.8.1",
     "cors": "^2.8.5",
