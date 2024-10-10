@@ -13,7 +13,11 @@ const maxPages = computed(() => Math.ceil(props.articleArray.length / maxShowArt
 // Fonction pour changer de page
 function switchPage(event) {
   let btn = event.target;
+  console.log(btn)
+
   const btnId = parseInt(btn.dataset.pageId)
+  console.log("id : " + btnId)
+
   currentPage.value = btnId;
   window.location.href = "#blog"
 }
@@ -33,7 +37,7 @@ const showArticle = computed(() => props.articleArray.slice(currentPage.value * 
     </div>
 
     <div v-if="maxPages > 1">
-      <button v-for="i in maxPages" style="border-radius: 10px" :class="{'bg-white' : true, 'p-2' : true, 'mr-2' : true, 'underline' : currentPage === i-1, 'px-3' : true}" :data-page-id="i-1" @click="switchPage"><b>{{i}}</b></button>
+      <button v-for="i in maxPages" style="border-radius: 10px; font-weight: bold" :class="{'bg-white' : true, 'p-2' : true, 'mr-2' : true, 'underline' : currentPage === i-1, 'px-3' : true}" :data-page-id="i-1" @click="switchPage">{{i}}</button>
     </div>
 
   </section>
