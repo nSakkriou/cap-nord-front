@@ -9,7 +9,7 @@
         </span>
       </h1>
       <p class="font-pt-serif font-normal mb-7">
-        Le projet est de relier Amsterdam au Cap Nord en vélo ...
+        Ce projet consiste à relier Amsterdam au Cap Nord en vélo sur une soixante de jours, tout en favorisant l’ouverture culturelle auprès des écoles primaires du Nord Cotentin.
       </p>
 
       <div v-if="isTheo">

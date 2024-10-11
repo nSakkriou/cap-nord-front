@@ -29,7 +29,7 @@ const showArticle = computed(() => props.articleArray.slice(currentPage.value * 
 <template>
   <section class="sectionSize bg-secondary" id="blog">
     <div>
-      <h2 class="secondaryTitle bg-underline3 bg-100% text-center">Blog</h2>
+      <h2 class="secondaryTitle bg-underline3 bg-100% text-center">Journal de bord</h2>
     </div>
     <div class="flex flex-col w-full">
       <p class="text-center" v-if="articleArray.length === 0">Je n'ai pas encore fait de post mais reviens vite afin de suivre mes aventures</p>

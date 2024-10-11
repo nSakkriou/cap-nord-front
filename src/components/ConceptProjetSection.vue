@@ -37,7 +37,8 @@ let odd = false;
     </h2>
 
     <div class="text-center">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum vel officia quibusdam distinctio itaque iste non, quod eos. Adipisci dignissimos quaerat nobis nisi aliquam magnam illum cum ad quibusdam quas.
+      <p>Ce projet est un projet pédagogique destiné aux classes de primaire visant à proposer une ouverture culturelle vers l’étranger concrète, par le biais d’un voyage en vélo, en sensibilisant à différentes thématiques telles que la mobilité verte, l’ouverture vers autrui et la richesse culturelle du monde.</p>
+      <p>Le voyage à vélo comme outil de sensibilisation à l’ouverture vers l’étranger et aux mobilités vertes </p>
     </div>
   </section>
 </template>

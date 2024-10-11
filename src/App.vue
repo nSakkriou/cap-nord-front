@@ -39,7 +39,7 @@ const navArray = [
 
 const cardArray = [
   {
-    label : "Mon blog",
+    label : "Journal de bord",
     link : "#blog"
   },
   {
@@ -63,14 +63,14 @@ getAllBlog().then(res => {
 
 const faq_item_array = [
   {
-    question : "Partenaire 1",
-    response : "Info partenaire 1",
-    logo_url : ""
+    question : "Bourse Ajir",
+    response : "La Bourse Ajir, porté par la Ligue de l’Enseignement et le Département de la Manche, soutient des projets à l'initiative des jeunes de 11 à 25 ans qui ont une utilité sociale sur le territoire.",
+    logo_url : "https://nathansakkriou.com/webContent/get/aafcae27-708b-4d14-b8be-2e5cdb077b76"
   },
   {
-    question : "Partenaire 2",
-    response : "Info partenaire 2",
-    logo_url : ""
+    question : "Pass Monde Initiative - La Région Normandie",
+    response : " La Région Normandie a lancé le dispositif Pass Monde pour soutenir la mobilité internationale des jeunes normands. Ce programme vise à favoriser leur autonomie, l’ouverture au monde, et à élargir leurs perspectives personnelles et professionnelles à travers des projets de mobilité.",
+    logo_url : "https://nathansakkriou.com/webContent/get/9a059de3-bca2-43aa-8ef1-14122d1bb6d1"
   }
 ]
 

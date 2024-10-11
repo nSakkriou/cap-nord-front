@@ -18,7 +18,8 @@ defineProps({
   faq_item_array : [
     {
       question: String,
-      response: String
+      response: String,
+      logo_url: String
     }
   ]
 })
