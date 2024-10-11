@@ -7,7 +7,7 @@
 
         <div class="flex justify-center flex-row">
           <div class="bg-white rounded-md">
-            <img class="p-2" :src="faq_item.logo_url" :alt="'Logo de ' + faq_item.question " style="height: 100px; width: auto"/>
+            <img class="p-2" :src="faq_item.logo_url" :alt="'Logo de ' + faq_item.question " style="height: 70px; width: auto"/>
           </div>
           <img src='/assets/logos/CaretRight.svg' alt="" class="transform transition-transform" />
         </div>

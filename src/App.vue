@@ -65,7 +65,7 @@ const faq_item_array = [
   {
     question : "Bourse Ajir",
     response : "La Bourse Ajir, porté par la Ligue de l’Enseignement et le Département de la Manche, soutient des projets à l'initiative des jeunes de 11 à 25 ans qui ont une utilité sociale sur le territoire.",
-    logo_url : "https://nathansakkriou.com/webContent/get/aafcae27-708b-4d14-b8be-2e5cdb077b76"
+    logo_url : "https://nathansakkriou.com/webContent/get/7e684196-852d-4053-ab09-9e0e1ecb9d39"
   },
   {
     question : "Pass Monde Initiative - La Région Normandie",
